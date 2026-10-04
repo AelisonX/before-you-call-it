@@ -1,0 +1,68 @@
+Support Request
+
+What were you trying to do?
+Open a shared document
+
+What happened instead?
+The document would not open
+
+What did the error say? (optional)
+Access could not be completed
+
+When did this start? (just now / today / recently / after a change / not sure)
+Today
+
+Did anything change recently? (update / application / network / account / device / not sure)
+Not sure
+
+Who else is affected? (only me / coworkers / don't know / not applicable)
+coworkers
+
+What have you already tried? (nothing yet is fine)
+Restarted the application
+
+Basic device information
+Operating system: Example OS [method: fictional fixture; observed at: fictional]
+Installed memory: 8.00 GiB [method: fictional fixture; observed at: fictional]
+System volume space: NOT_CHECKED. You may provide this manually or skip it.
+Uptime: NOT_CHECKED. You may provide this manually or skip it.
+Basic network observation: NOT_CHECKED. You may provide this manually or skip it.
+
+What this tool did not check
+Account permissions; VPN configuration; internal/company server status; hardware health; malware; security software; application licensing; organisational access controls; company security policy.
+
+Suggested support direction
+You reported that coworkers are affected. This may be useful information for IT/support. This tool cannot determine the cause.
+
+Privacy
+Generated locally; not automatically sent anywhere. Review before sharing. Error messages and other answers can contain private information. Automatic omissions are incomplete. Identifiers are not collected. Output remains in this terminal and its scrollback; no report file is saved.
+
+--- Plain support message ---
+
+Hi IT Support,
+
+I was trying to: Open a shared document
+What happened: The document would not open
+Error message: Access could not be completed
+When it started: Today
+Recent changes: Not sure
+Other people affected: coworkers
+What I already tried: Restarted the application
+
+Basic local observations:
+Operating system: Example OS [method: fictional fixture; observed at: fictional]
+Installed memory: 8.00 GiB [method: fictional fixture; observed at: fictional]
+System volume space: NOT_CHECKED. You may provide this manually or skip it.
+Uptime: NOT_CHECKED. You may provide this manually or skip it.
+Basic network observation: NOT_CHECKED. You may provide this manually or skip it.
+
+What this tool did not check:
+Account permissions; VPN configuration; internal/company server status; hardware health; malware; security software; application licensing; organisational access controls; company security policy.
+
+You reported that coworkers are affected. This may be useful information for IT/support. This tool cannot determine the cause.
+Could you please let me know what information you need next?
+
+Thanks.
+
+Privacy
+Generated locally; not automatically sent anywhere. Review before sharing. Error messages and other answers can contain private information. Automatic omissions are incomplete. Identifiers are not collected. Output remains in this terminal and its scrollback; no report file is saved.
