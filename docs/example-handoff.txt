@@ -24,9 +24,9 @@ Restarted the application
 Basic device information
 Operating system: Example OS [method: fictional fixture; observed at: fictional]
 Installed memory: 8.00 GiB [method: fictional fixture; observed at: fictional]
-System volume space: NOT_CHECKED. You may provide this manually or skip it.
+Current drive root space: NOT_CHECKED. You may provide this manually or skip it.
 Uptime: NOT_CHECKED. You may provide this manually or skip it.
-Basic network observation: NOT_CHECKED. You may provide this manually or skip it.
+Basic network observation: NOT_CHECKED. This prototype does not perform connectivity probes or inspect network identifiers.
 
 What this tool did not check
 Account permissions; VPN configuration; internal/company server status; hardware health; malware; security software; application licensing; organisational access controls; company security policy.
@@ -35,7 +35,7 @@ Suggested support direction
 You reported that coworkers are affected. This may be useful information for IT/support. This tool cannot determine the cause.
 
 Privacy
-Generated locally; not automatically sent anywhere. Review before sharing. Error messages and other answers can contain private information. Automatic omissions are incomplete. Identifiers are not collected. Output remains in this terminal and its scrollback; no report file is saved.
+Generated locally; not automatically sent anywhere. Review before sharing. Error messages and other answers can contain private information. Automatic omissions are incomplete. Automatic observations do not collect usernames, hostnames, or network identifiers. Free-text answers may still contain identifying information. Review before sharing. Output remains in this terminal and its scrollback; no report file is saved.
 
 --- Plain support message ---
 
@@ -50,11 +50,11 @@ Other people affected: coworkers
 What I already tried: Restarted the application
 
 Basic local observations:
-Operating system: Example OS [method: fictional fixture; observed at: fictional]
-Installed memory: 8.00 GiB [method: fictional fixture; observed at: fictional]
-System volume space: NOT_CHECKED. You may provide this manually or skip it.
+Operating system: Example OS
+Installed memory: 8.00 GiB
+Current drive root space: NOT_CHECKED. You may provide this manually or skip it.
 Uptime: NOT_CHECKED. You may provide this manually or skip it.
-Basic network observation: NOT_CHECKED. You may provide this manually or skip it.
+Basic network observation: NOT_CHECKED. This prototype does not perform connectivity probes or inspect network identifiers.
 
 What this tool did not check:
 Account permissions; VPN configuration; internal/company server status; hardware health; malware; security software; application licensing; organisational access controls; company security policy.
@@ -65,4 +65,4 @@ Could you please let me know what information you need next?
 Thanks.
 
 Privacy
-Generated locally; not automatically sent anywhere. Review before sharing. Error messages and other answers can contain private information. Automatic omissions are incomplete. Identifiers are not collected. Output remains in this terminal and its scrollback; no report file is saved.
+Generated locally; not automatically sent anywhere. Review before sharing. Error messages and other answers can contain private information. Automatic omissions are incomplete. Automatic observations do not collect usernames, hostnames, or network identifiers. Free-text answers may still contain identifying information. Review before sharing. Output remains in this terminal and its scrollback; no report file is saved.

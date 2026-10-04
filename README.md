@@ -12,9 +12,9 @@ If this is a company-managed device, ask your organisation’s IT team before in
 
 ## What it does
 
-Seven optional questions record your task, symptom, error, start time, recent changes, other people affected and actions already tried. With your confirmation it reads five local observations: OS/version, RAM capacity, system-volume total/free space, uptime and whether any network interface is enabled. It previews a structured Support Handoff and a plain-language IT message in your terminal. Copy only what you have reviewed.
+Seven optional questions record your task, symptom, error, start time, recent changes, other people affected and actions already tried. With your confirmation it reads four local observations: OS/version, RAM capacity, current drive root total/free space and uptime. The network report field is intentionally NOT_CHECKED: this prototype does not perform connectivity probes or inspect network identifiers. It previews a structured Support Handoff and a plain-language IT message in your terminal. Copy only what you have reviewed.
 
-OBSERVED means a value was read. UNAVAILABLE means the API could not read it; a safe explanation suggests skipping or providing information manually. NOT_CHECKED means no check was performed. None of these states is a diagnosis. Conflicts remain visible with UNKNOWN interpretation. RAM is capacity in GiB (2^30 bytes), not a utilisation score. Disk data covers only the system volume. An enabled network interface does not prove internet, VPN or company service access.
+OBSERVED means a value was read. UNAVAILABLE means the API could not read it; a safe explanation suggests skipping or providing information manually. NOT_CHECKED means no check was performed. None of these states is a diagnosis. Conflicts remain visible with UNKNOWN interpretation. RAM is capacity in GiB (2^30 bytes), not a utilisation score. Disk data covers the current drive root context, not a verified operating-system system volume. Network state is intentionally not checked.
 
 ## What it does not do
 
@@ -48,7 +48,7 @@ Use ordinary user permissions. Do not bypass security warnings or grant addition
 
 ## Privacy and persistence
 
-Automatic observations do not include usernames, hostnames, IP/MAC addresses, SSIDs, serial numbers, file paths, browser data, credentials or environment variables. Interface names are discarded locally; only an aggregate boolean is retained. The disk path is used locally and never output. No data leaves the device during application execution.
+Automatic observations do not include usernames, hostnames, IP/MAC addresses, SSIDs, serial numbers, file paths, browser data, credentials or environment variables. No network interface APIs are called. Free-text answers may still contain identifying information. The disk path is used locally and never output. No data leaves the device during application execution.
 
 Free-text answers can still contain sensitive data. Basic pattern-based omissions cover emails, URLs, common addresses/paths and labelled secrets or identifiers. This is deliberately incomplete: unlabelled names, server names, unusual paths or secrets can remain. Never enter passwords, authentication codes or keys. Review both previews before sharing. The application holds answers in memory, writes to terminal output/scrollback, and does not save report files. Terminal logging or the place you paste a report can retain it independently.
 
@@ -58,17 +58,17 @@ Minimal dependencies reduce, but do not eliminate, supply-chain risk. Review cod
 
 ## Testing and platform evidence
 
-Tested on Windows 11. The completed real-device evidence includes the interactive CLI flow, all five collectors, no unexpected privilege/privacy/security prompts, an actual disconnected-network run and public-safe screenshots. This evidence was reported by the project owner.
+Tested on Windows 11. The completed real-device evidence includes the interactive CLI flow, the original five collectors, no unexpected privilege/privacy/security prompts, an actual disconnected-network run and public-safe screenshots. Post-build review removed the automatic network-state inference; the revised build still needs a physical disconnected-network rerun. This evidence was reported by the project owner.
 
 CI runs the same fixture and scope tests on Windows and macOS with Python 3.10 and 3.13. Both platforms pass CI; this is compatibility evidence only, not real-device support verification. CI also runs on macOS, but no real macOS device verification has been completed, so macOS support is not currently claimed. See [device verification](docs/device-verification.md) for the evidence record and pending Mac verification.
 
-Tests cover state invariants, missing data, API failures, unit conversion, conflicts, both network wordings, coworker wording, questionnaire input, privacy omissions, language safety, offline operation and static scope restrictions.
+Tests cover state invariants, missing data, API failures, unit conversion, conflicts, intentional network omission, coworker wording, questionnaire input, privacy omissions, language safety, offline operation and static scope restrictions.
 
 ## Understandable file map
 
 - `model.py`: explicit observation values, provenance and three states.
 - `questionnaire.py`: seven human questions.
-- `collectors.py`: five read-only API checks; no interpretation.
+- `collectors.py`: four read-only API checks and an intentional network omission; no interpretation.
 - `privacy.py`: conservative text omissions.
 - `reports.py`: fixed-order formatting and a limited coworker rule, without cause inference.
 - `cli.py`: questionnaire, optional collection and terminal preview.
