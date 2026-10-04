@@ -2,7 +2,7 @@
 
 Date: 2026-10-04 (Australia/Brisbane).
 
-Public position: **Tested on Windows 11.** Distribution remains a Windows-tested source-run prototype, with no unsigned executable distribution. The corrected build still needs a physical disconnected-network rerun; it is not yet publication-ready.
+Public position: **Tested on Windows 11.** Distribution remains a Windows-tested source-run prototype, with no packaged executable or unsigned executable distribution. The corrected Windows build physical disconnected-network rerun is COMPLETE/PASS, as reported by the project owner. The required Windows verification is complete for publication as a Windows-tested source-run prototype.
 
 ## Windows PC — earlier publication evidence
 
@@ -17,22 +17,23 @@ The earlier physical disconnected-network run produced “A network interface ap
 
 Earlier local tests used psutil 7.2.2 in a source-run virtual environment. No raw private measurements, identifiers or answers are stored here. The prior screenshots describe the earlier build and do not verify the corrected wording.
 
-## Windows corrected build — physical disconnected-network rerun pending
+## Windows corrected build — physical disconnected-network rerun COMPLETE/PASS
 
-On a physically disconnected Windows device, rerun the interactive CLI and opt in to the four local observations. Confirm:
+On 2026-10-04, the project owner reported these results on a real Windows 11 device, physically disconnected from the internet:
 
-- The application runs offline.
-- Basic network observation is NOT_CHECKED, with the intentional scope explanation.
-- No connectivity probe occurs (also covered by code review and automated tests).
-- Disk wording is Current drive root space.
-- The plain support message has no method/timestamp metadata; the structured handoff retains provenance.
-- No privilege/privacy/security prompts appear. If any appear, stop and review scope without bypassing them.
+- The application ran successfully offline.
+- The user opted in to the four local observations.
+- Operating system, installed memory, current drive root space and uptime were collected successfully.
+- Basic network observation displayed exactly: `NOT_CHECKED. This prototype does not perform connectivity probes or inspect network identifiers.`
+- The structured handoff retained method/timestamp provenance.
+- The plain support message did not include method/timestamp metadata.
+- No UAC / Administrator, Windows privacy, Defender, SmartScreen or other privilege/security prompt appeared.
 
-Record the result and updated public-safe screenshots. Automated tests blocking socket connection attempts do not establish physical disconnected-device verification. No connection or system configuration was changed automatically for this fix pass.
+This is a completed physical disconnected-device test, separate from automated tests that block socket connection attempts. Code review and automated tests provide evidence that no connectivity probe occurs. Updated screenshots from this rerun have not been supplied or included in the repository; the earlier screenshot record remains unchanged.
 
 ## macOS — CI compatibility evidence only
 
-Windows and macOS CI pass on Python 3.10 and 3.13 for the preceding build; check the latest run for the corrected commit. CI is compatibility evidence only, not real-device support verification.
+The corrected implementation commit `42174d8` passed Windows and macOS CI on Python 3.10 and 3.13. CI is compatibility evidence only, not real-device support verification.
 
 CI also runs on macOS, but no real macOS device verification has been completed, so macOS support is not currently claimed. A real macOS device is currently unavailable; verification remains pending.
 

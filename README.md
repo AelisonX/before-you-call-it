@@ -58,7 +58,7 @@ Minimal dependencies reduce, but do not eliminate, supply-chain risk. Review cod
 
 ## Testing and platform evidence
 
-Tested on Windows 11. The completed real-device evidence includes the interactive CLI flow, the original five collectors, no unexpected privilege/privacy/security prompts, an actual disconnected-network run and public-safe screenshots. Post-build review removed the automatic network-state inference; the revised build still needs a physical disconnected-network rerun. This evidence was reported by the project owner.
+Tested on Windows 11. The completed real-device evidence includes the interactive CLI flow, the original five collectors, no unexpected privilege/privacy/security prompts, an actual disconnected-network run and public-safe screenshots. Post-build review removed the automatic network-state inference; the corrected build has completed its physical disconnected-network rerun on Windows 11 (COMPLETE/PASS), including all four local observations and both report formats. This evidence was reported by the project owner.
 
 CI runs the same fixture and scope tests on Windows and macOS with Python 3.10 and 3.13. Both platforms pass CI; this is compatibility evidence only, not real-device support verification. CI also runs on macOS, but no real macOS device verification has been completed, so macOS support is not currently claimed. See [device verification](docs/device-verification.md) for the evidence record and pending Mac verification.
 
