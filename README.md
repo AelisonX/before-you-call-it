@@ -4,7 +4,9 @@ Turn “my computer isn’t working” into a support request someone can actual
 
 ## Status
 
-Revised V0.1: free, source-run developer/test prototype, not currently intended for sale. This is a support communication helper, not a diagnostic or repair product. Do not describe it as enterprise-ready or portfolio-ready until human explanation and real-device verification are completed.
+Revised V0.1: free, Windows-tested source-run prototype, not currently intended for sale. Tested on Windows 11. This is a support communication helper, not a diagnostic or repair product. It is not enterprise-ready.
+
+CI also runs on macOS, but no real macOS device verification has been completed, so macOS support is not currently claimed.
 
 If this is a company-managed device, ask your organisation’s IT team before installing or running unapproved software.
 
@@ -34,7 +36,7 @@ Windows:
 .venv\Scripts\python -m unittest discover -s tests -v
 ```
 
-macOS:
+macOS development/verification commands only (not a claim of macOS support):
 
 ```text
 .venv/bin/python -m pip install -e .
@@ -42,7 +44,7 @@ macOS:
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-Use ordinary user permissions. Do not bypass security warnings or grant additional access to get observations. If an unexpected privacy or privilege prompt appears, stop and review the collector's scope. No unsigned executable distribution is provided.
+Use ordinary user permissions. Do not bypass security warnings or grant additional access to get observations. If an unexpected privacy or privilege prompt appears, stop and review the collector's scope. Distribution remains a Windows-tested source-run prototype. No packaged Windows release or unsigned executable distribution is provided.
 
 ## Privacy and persistence
 
@@ -56,7 +58,9 @@ Minimal dependencies reduce, but do not eliminate, supply-chain risk. Review cod
 
 ## Testing and platform evidence
 
-CI runs the same fixture and scope tests on Windows and macOS with Python 3.10 and 3.13. Passing CI alone does not establish real macOS support. See [device verification](docs/device-verification.md) for actual evidence and pending work. No cross-platform support claim is made yet.
+Tested on Windows 11. The completed real-device evidence includes the interactive CLI flow, all five collectors, no unexpected privilege/privacy/security prompts, an actual disconnected-network run and public-safe screenshots. This evidence was reported by the project owner.
+
+CI runs the same fixture and scope tests on Windows and macOS with Python 3.10 and 3.13. Both platforms pass CI; this is compatibility evidence only, not real-device support verification. CI also runs on macOS, but no real macOS device verification has been completed, so macOS support is not currently claimed. See [device verification](docs/device-verification.md) for the evidence record and pending Mac verification.
 
 Tests cover state invariants, missing data, API failures, unit conversion, conflicts, both network wordings, coworker wording, questionnaire input, privacy omissions, language safety, offline operation and static scope restrictions.
 
